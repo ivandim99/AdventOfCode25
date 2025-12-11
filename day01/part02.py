@@ -3,17 +3,17 @@ with open("input.txt") as file:
 
 converted = []
 
-for step in steps: 
-    if("L" in step):
-        converted.append(- int(step.strip("L")))
-    else: 
+for step in steps:
+    if "L" in step:
+        converted.append(-int(step.strip("L")))
+    else:
         converted.append(int(step.strip("R")))
 
 counter = 0
 start = 50
 
 for turn in converted:
-    if(turn < 0):
+    if turn < 0:
         div = turn // -100
         mod = turn % -100
         counter += div
